@@ -23,3 +23,21 @@ def log_event(timestamp: datetime, window_title: str, is_focused: bool, reason: 
     VALUES (?, ?, ?, ?)
     """, (timestamp, window_title, is_focused, reason))
     conn.commit()
+
+def get_last_event():
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT is_focused, window_title, reason
+        FROM focus_events
+        ORDER BY timestamp DESC
+        LIMIT 1
+    """)
+    row = cursor.fetchone()
+    if not row:
+        return None
+    return {
+        "is_focused": row[0],
+        "window_title": row[1],
+        "reason": row[2]
+        }
+    

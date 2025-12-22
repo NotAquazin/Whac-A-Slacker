@@ -1,0 +1,14 @@
+body {
+    transition: background-color 0.3s ease;
+    font-family: sans-serif;
+}
+
+body.focused {
+    background-color: #1e7f4b;
+    color: rgb(142, 237, 135);
+}
+
+body.distracted {
+    background-color: #7f1e1e;
+    color: rgb(255, 127, 127);
+}
