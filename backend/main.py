@@ -1,13 +1,23 @@
-import win32gui
-from services.whacker_engine import evaluate_focus
+import webview
+from api import API
+from background.scheduler import start_background_tasks
+from storage.database import init_db
+from pathlib import Path
 
-def getForegroundWindowTitle():
-    try:
-        window = win32gui.GetForegroundWindow()
-        return win32gui.GetWindowText(window)
-    except Exception as e:
-        return str(e)
+def start_app():
+    init_db()
+    start_background_tasks()
 
-print(getForegroundWindowTitle())
-print(evaluate_focus(getForegroundWindowTitle()))
-print(win32gui.GetActiveWindow())
+    web_dir = Path(__file__).resolve().parent.parent/"web"
+    index_file = web_dir/"index.html"
+
+    window = webview.create_window(
+        "Focus App",
+        index_file.as_uri(),
+        js_api=API()
+    )
+
+    webview.start()
+
+if __name__ == "__main__":
+    start_app()

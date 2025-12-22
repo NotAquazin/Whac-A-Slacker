@@ -19,7 +19,7 @@ def init_db():
 def log_event(timestamp: datetime, window_title: str, is_focused: bool, reason: str):
     cursor = conn.cursor()
     cursor.execute("""
-    INSERT INTO focus_events (window_title, is_productive, reason)
-    VALUES (?, ?, ?)
+    INSERT INTO focus_events (timestamp, window_title, is_focused, reason)
+    VALUES (?, ?, ?, ?)
     """, (timestamp, window_title, is_focused, reason))
     conn.commit()
