@@ -30,12 +30,14 @@ async function refreshFocus() {
 let button = document.getElementById('checkerButton');
 button.addEventListener('click', function() {
     if (button.innerText === 'Start') {
+        window.pywebview.api.start_tracking();
         button.innerText = 'Stop';
         refreshFocus();
         window.focusInterval = setInterval(refreshFocus, 1000);
     }
     else {
         button.innerText = 'Start';
+        window.pywebview.api.stop_tracking();
         clearInterval(window.focusInterval);
         document.getElementById("windowTitle").innerText = "—";
         document.getElementById("reason").innerText = "—";

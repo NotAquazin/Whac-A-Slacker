@@ -6,7 +6,6 @@ from pathlib import Path
 
 def start_app():
     init_db()
-    start_background_tasks()
 
     web_dir = Path(__file__).resolve().parent.parent/"web"
     index_file = web_dir/"index.html"
