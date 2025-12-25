@@ -1,6 +1,8 @@
 body {
     transition: background-color 0.3s ease;
     font-family: sans-serif;
+    background-color: #297fa7;
+    color: #7fd6ff;
 }
 
 body.focused {

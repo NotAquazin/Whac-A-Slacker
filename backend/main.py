@@ -12,7 +12,7 @@ def start_app():
     index_file = web_dir/"index.html"
 
     window = webview.create_window(
-        "Focus App",
+        "Whac-A-Slacker",
         index_file.as_uri(),
         js_api=API()
     )

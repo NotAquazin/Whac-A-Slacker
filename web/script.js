@@ -1,6 +1,5 @@
 // Alarm audio setup
 import AudioAPI from './AudioAPI.js';
-print("Audio running")
 const audio = new AudioAPI;
 audio.setupAudio(document);
 
@@ -27,4 +26,23 @@ async function refreshFocus() {
     }
 }
 
-setInterval(refreshFocus, 1000);
+// Button to start/stop focus checking
+let button = document.getElementById('checkerButton');
+button.addEventListener('click', function() {
+    if (button.innerText === 'Start') {
+        button.innerText = 'Stop';
+        refreshFocus();
+        window.focusInterval = setInterval(refreshFocus, 1000);
+    }
+    else {
+        button.innerText = 'Start';
+        clearInterval(window.focusInterval);
+        document.getElementById("windowTitle").innerText = "—";
+        document.getElementById("reason").innerText = "—";
+        document.getElementById("status").innerText = "Whac-A-Slacker";
+        document.body.className = "idle";
+        audio.stopAudio();
+    }
+
+});
+
