@@ -1,4 +1,4 @@
-PRODUCTIVE_KEYWORDS = ["Visual Studio Code", "PyCharm", "Terminal", "YouTube Music"]
+PRODUCTIVE_KEYWORDS = ["Whac-A-Slacker", "Visual Studio Code", "PyCharm", "Terminal", "YouTube Music"]
 #Note: Temporary; keywords would be loaded from user settings.
 #      Keywords can either be the app or their specific tab (like a google tab)
 

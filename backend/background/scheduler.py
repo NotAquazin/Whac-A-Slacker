@@ -1,4 +1,5 @@
 import time
+import threading
 from services.window_tracker import get_foreground_window_title
 from services.whacker_engine import evaluate_focus
 from services.event_logger import log_focus_event
@@ -18,5 +19,4 @@ def focus_loop():
         time.sleep(1)
 
 def start_background_tasks():
-    import threading
     threading.Thread(target=focus_loop, daemon=True).start()
