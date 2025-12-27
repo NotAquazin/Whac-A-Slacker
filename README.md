@@ -19,6 +19,7 @@ Upcoming Features:
     Default label for undefined windows/tabs, 
     Slider for delay before alarm rings, 
     and more)
+- Online website version
 - Configurable Facial direction detection using Computer Vision 
     (May be used to ensure user is not distracted on their phone)
   
