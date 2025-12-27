@@ -1,5 +1,5 @@
 # Whac-A-Slacker
-A lightweight slacker detector app that reminds you to get back to locking in on your work.
+A lightweight slacker detector app for windows devices that reminds you to get back to locking in on your work.
 It detects which window or tab you're currently focused on and rings an alarm when you're on
 a non-productive window. It also locally logs all window focus change to help you keep track
 of how much you tend to lock out.
