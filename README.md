@@ -14,13 +14,13 @@ Current features:
 Upcoming Features:
 - UI for defining productive vs non-productive windows/tabs
 - Cutomizability:
--     Custom alarms
--     Alarm volume
--     Default label for undefined windows/tabs
--     Slider for delay before alarm rings
--     and more
+    Custom alarms
+    Alarm volume
+    Default label for undefined windows/tabs
+    Slider for delay before alarm rings
+    and more
 - Configurable Facial direction detection using Computer Vision
--     May be used to ensure user is not distracted on their phone    
+    May be used to ensure user is not distracted on their phone    
   
 ---------------------------------------------------------------------------------------    
 
