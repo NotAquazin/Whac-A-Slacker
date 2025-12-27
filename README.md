@@ -14,19 +14,19 @@ Current features:
 Upcoming Features:
 - UI for defining productive vs non-productive windows/tabs
 - Cutomizability:
-    Custom alarms
-    Alarm volume
-    Default label for undefined windows/tabs
-    Slider for delay before alarm rings
-    and more
+-     Custom alarms
+-     Alarm volume
+-     Default label for undefined windows/tabs
+-     Slider for delay before alarm rings
+-     and more
 - Configurable Facial direction detection using Computer Vision
-    May be used to ensure user is not distracted on their phone    
+-     May be used to ensure user is not distracted on their phone    
   
 ---------------------------------------------------------------------------------------    
 
 Dependencies for development:
-Python 3.13 (3.14 not supported yet by pythonnet)
-pywebview
-pythonnet
-pywin32
-JS
+- Python 3.13 (3.14 not supported yet by pythonnet)
+- pywebview
+- pythonnet
+- pywin32
+- JS
